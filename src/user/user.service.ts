@@ -8,6 +8,7 @@ import { JwtService } from '@nestjs/jwt';
 export class UserService {
   constructor(private prisma: PrismaService, private jwtService: JwtService,) {}
 
+  // User Registration
   async register(email: string, password: string) {
     const existingUser = await this.prisma.user.findUnique({ where: { email } });
     if (existingUser) {
@@ -24,6 +25,7 @@ export class UserService {
     });
   }
 
+  // Validate the User
   async validateUser(email: string, password: string): Promise<any> {
     const user = await this.prisma.user.findUnique({ where: { email } });
     if (!user) throw new UnauthorizedException('Invalid credentials');

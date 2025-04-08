@@ -10,6 +10,7 @@ export class AuthService {
     private jwtService: JwtService,
   ) {}
 
+  // User Validation
   async validateUser(email: string, password: string) {
     const user = await this.prisma.user.findUnique({ where: { email } });
 
@@ -20,6 +21,7 @@ export class AuthService {
     return user;
   }
 
+  // User Login
   async login(email: string, password: string) {
     const user = await this.validateUser(email, password);
     const payload = { sub: user.id, email: user.email };
@@ -29,6 +31,7 @@ export class AuthService {
     };
   }
 
+  // Biometric User Login
   async biometricLogin(biometricKey: string) {
     const user = await this.prisma.user.findUnique({ where: { biometricKey } });
 

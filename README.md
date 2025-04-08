@@ -31,4 +31,6 @@ npm install --save-dev @types/passport-jwt
 npm run start:dev
 8. **Access the GraphQL Playground**
 Open your browser and go to: http://localhost:3000/graphql
-note: ensure you have docker installed on your local 
+note: ensure you have docker installed on your local
+9. **Unit Testing**
+npm run test user

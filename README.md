@@ -34,3 +34,6 @@ Open your browser and go to: http://localhost:3000/graphql
 note: ensure you have docker installed on your local
 9. **Unit Testing**
 npm run test user
+
+**API Documentation**
+I have attached along the files a clear and concise postman API documentation for testing the endpoints. 

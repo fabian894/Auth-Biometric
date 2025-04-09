@@ -23,14 +23,14 @@ DATABASE_URL="postgresql://postgres:your_password@localhost:5432/db_name"
 JWT_SECRET=your_super_secret_key
 note: please ignore if the .env created initially is cloned along with the project but make sure the database exist on your postgreSQL and change the "db_name" to the database name created on your db
 5. **Push the schema to the database**
-npx prisma db push
+npx prisma db push 
 6. **Install authentication packages**
 npm install @nestjs/jwt @nestjs/passport passport passport-jwt
 npm install --save-dev @types/passport-jwt
 7. **Run the development server**
 npm run start:dev
 8. **Access the GraphQL Playground**
-Open your browser and go to: http://localhost:3000/graphql
+Open your browser and go to: http://localhost:3000/graphql OR open postman with the attached postman documentation for seamless navigation and testing
 note: ensure you have docker installed on your local
 9. **Unit Testing**
 npm run test user
